@@ -1,42 +1,97 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+	position: relative;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+	height: 100vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+* {
+	box-sizing: border-box;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	margin-bottom: 32px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.content {
+	align-self: center;
+}
+
+.rendered-component {
+	display: flex;
+	justify-content: center;
+}
+
+.box {
+	width: 300px;
+	height: 300px;
+	background-color: rgb(126, 0, 0);
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+span {
+	display: block;
+	font-weight: 900;
+	font-size: 2rem;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.test {
+	animation: pulse 1s linear infinite;
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.modal {
+	background-color: rgb(78, 78, 78);
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	justify-content: center;
+	align-items: center;
+	inset: 0 0 0 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+	a:nth-of-type(2) .logo {
+		animation: logo-spin infinite 20s linear;
+	}
 }
 
 .card {
-  padding: 2em;
+	padding: 2em;
 }
 
 .read-the-docs {
-  color: #888;
+	color: #888;
 }
