@@ -6,18 +6,20 @@ export function Modal() {
 	return (
 		<>
 			<button onClick={() => setToggle((prev) => !prev)} type="button">
-				Open Modal
+				Find the box
 			</button>
 			<AnimatePresence>
 				{toggle && (
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
-						transition={{ duration: 0.3 }}
+						exit={{ opacity: 0, transition: { duration: 0.1 } }}
+						transition={{ duration: 0.2 }}
 					>
 						<div className="modal">
-							<p>This is a modal!</p>
+							<div className="box">
+								<span>BOX</span>
+							</div>
 							<button onClick={() => setToggle((prev) => !prev)} type="button">
 								Close
 							</button>

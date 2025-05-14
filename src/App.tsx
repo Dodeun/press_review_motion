@@ -4,8 +4,8 @@ import { Intro } from "./components/Intro";
 import { Limits } from "./components/Limits";
 import { Modal } from "./components/Modal";
 import { Slider } from "./components/slider";
-import { Keyframes } from "./components/keyframes";
-import { Drag } from "./components/drag";
+import { Keyframes } from "./components/Keyframes";
+import { Drag } from "./components/Drag";
 import "./App.css";
 
 function App() {
@@ -56,7 +56,7 @@ function App() {
 					key={activeComponent}
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
-					transition={{ duration: 0.5 }}
+					transition={{ duration: 0.3 }}
 				>
 					<div className="rendered-component">{renderComponent()}</div>
 				</motion.div>
