@@ -38,7 +38,7 @@ export function Drag() {
 				className={`box draggable-box ${status ? "draggable-box-on" : "draggable-box-off"}`}
 				onDrag={(event) => handleDrag(event as PointerEvent)}
 			>
-				<span>BOX</span>
+				<span style={{ pointerEvents: "none" }}>BOX</span>
 			</motion.div>
 		</div>
 	);

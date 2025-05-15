@@ -5,7 +5,7 @@ export function Modal() {
 	const [toggle, setToggle] = useState<boolean>(false);
 	return (
 		<>
-			<button onClick={() => setToggle((prev) => !prev)} type="button">
+			<button onClick={() => setToggle(!toggle)} type="button">
 				Find the box
 			</button>
 			<AnimatePresence>

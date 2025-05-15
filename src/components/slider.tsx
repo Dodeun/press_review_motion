@@ -18,7 +18,7 @@ export function Slider() {
 						initial={{ x: 1000, opacity: 0 }}
 						animate={{ x: 0, opacity: 1 }}
 						exit={{ x: -1000, opacity: 0 }}
-						transition={{ duration: 0.3, ease: "linear" }}
+						transition={{ duration: 0.3, ease: "linear", type: "spring" }}
 					>
 						<span>BOX</span>
 					</motion.div>

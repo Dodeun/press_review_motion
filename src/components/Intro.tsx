@@ -5,8 +5,11 @@ export function Intro() {
 		<>
 			<motion.div
 				className="box"
+				initial={{
+					rotate: "0deg",
+				}}
 				animate={{
-					rotate: 360,
+					rotate: "360deg",
 				}}
 				transition={{
 					duration: 10,

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion, scale } from "motion/react";
 import { Intro } from "./components/Intro";
 import { Limits } from "./components/Limits";
 import { Modal } from "./components/Modal";
-import { Slider } from "./components/slider";
+import { Slider } from "./components/Slider";
 import { Keyframes } from "./components/Keyframes";
 import { Drag } from "./components/Drag";
 import "./App.css";
@@ -42,13 +42,15 @@ function App() {
 		<>
 			<div className="buttons">
 				{buttonsList.map((button, index) => (
-					<button
+					<motion.button
 						key={button}
 						onClick={() => setActiveComponent(index)}
 						type="button"
+						whileHover={{ scale: 1.05 }}
+						whileTap={{ scale: 0.95 }}
 					>
 						{button}
-					</button>
+					</motion.button>
 				))}
 			</div>
 			<div className="content">
