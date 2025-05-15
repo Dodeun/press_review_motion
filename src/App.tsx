@@ -1,18 +1,20 @@
 import { useState } from "react";
-import { motion, scale } from "motion/react";
+import { motion } from "motion/react";
 import { Intro } from "./components/Intro";
 import { Limits } from "./components/Limits";
 import { Modal } from "./components/Modal";
 import { Slider } from "./components/Slider";
-import { Keyframes } from "./components/Keyframes";
+import { Animate } from "./components/Animate";
 import { Drag } from "./components/Drag";
+import { Variants } from "./components/Variants";
 import "./App.css";
 
 function App() {
 	const [activeComponent, setActiveComponent] = useState<number>(0);
 	const buttonsList = [
 		"Intro",
-		"Keyframes",
+		"Animate",
+		"Variants",
 		"Modal",
 		"Slider",
 		"Drag",
@@ -24,14 +26,16 @@ function App() {
 			case 0:
 				return <Intro />;
 			case 1:
-				return <Keyframes />;
+				return <Animate />;
 			case 2:
-				return <Modal />;
+				return <Variants />;
 			case 3:
-				return <Slider />;
+				return <Modal />;
 			case 4:
-				return <Drag />;
+				return <Slider />;
 			case 5:
+				return <Drag />;
+			case 6:
 				return <Limits />;
 			default:
 				return null;
