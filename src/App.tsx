@@ -50,7 +50,7 @@ function App() {
 						key={button}
 						onClick={() => setActiveComponent(index)}
 						type="button"
-						whileHover={{ scale: 1.05 }}
+						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.95 }}
 					>
 						{button}
